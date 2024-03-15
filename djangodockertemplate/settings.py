@@ -76,9 +76,18 @@ WSGI_APPLICATION = 'djangodockertemplate.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    ##'default': {
+    ##    'ENGINE': 'django.db.backends.sqlite3',
+    ##    'NAME': BASE_DIR / 'db.sqlite3',
+    ##}
+
+     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydatabase',  # Your PostgreSQL database name
+        'USER': 'myuser',  # Your PostgreSQL user
+        'PASSWORD': 'mypassword',  # Your PostgreSQL password
+        'HOST': 'localhost',  # Hostname
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
 
