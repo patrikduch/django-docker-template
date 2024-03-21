@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'mydatabase',  # Your PostgreSQL database name
         'USER': 'myuser',  # Your PostgreSQL user
         'PASSWORD': 'mypassword',  # Your PostgreSQL password
-        'HOST': 'localhost',  # Hostname
+        'HOST': 'host.docker.internal',  # Hostname
         'PORT': '5432',  # Default PostgreSQL port
     }
 }
