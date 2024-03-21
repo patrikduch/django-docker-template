@@ -11,6 +11,13 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import environ
+
+# Initialize environ
+env = environ.Env()
+
+# Assuming the .env file is located at the project base directory
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,7 +90,7 @@ DATABASES = {
 
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydatabase',  # Your PostgreSQL database name
+        'NAME': env('DB_NAME'),  # Your PostgreSQL database name
         'USER': 'myuser',  # Your PostgreSQL user
         'PASSWORD': 'mypassword',  # Your PostgreSQL password
         'HOST': 'host.docker.internal',  # Hostname
