@@ -47,3 +47,21 @@ python manage.py runserver
 ```bash
 python manage.py createsuperuser
 ```
+
+
+### Django Ninja API
+
+This project includes a Django Ninja module mounted at `/ninja-api/`.
+
+#### Endpoints
+
+- `GET /ninja-api/ping`  
+  Returns a simple JSON response for testing:
+  ```json
+  {
+    "message": "pong"
+  }
+
+- `GET /ninja-api/docs`  
+
+    Opens the auto-generated Swagger UI documentation for all Ninja API endpoints.
