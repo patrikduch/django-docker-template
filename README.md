@@ -40,3 +40,10 @@ Startup of Webserver
 ```bash
 python manage.py runserver
 ```
+
+
+### Create an admin user (optional)
+
+```bash
+python manage.py createsuperuser
+```
