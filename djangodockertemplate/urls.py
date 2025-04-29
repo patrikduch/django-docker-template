@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include  # Make sure 'include' is imported here
+from ninja_api.router import api as ninja_api  # Import NinjaAPI instance
 
 urlpatterns = [
     path('', include('api.urls')),
     path('admin/', admin.site.urls),
+    path('ninja-api/', ninja_api.urls),       
 ]
